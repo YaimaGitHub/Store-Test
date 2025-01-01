@@ -1,0 +1,19 @@
+<div class="wrap-login container">
+  <div class="content">
+    <div class=" section-logo-title">
+      <div class="logo">
+        <img src="https://res.cloudinary.com/unjfsc/image/upload/v1619591037/nove-rous_j7gh8m.svg" alt="">
+      </div>
+      <div class="section-title">
+        <p class="welcome">Welcome back</p>
+        <h2 class="title">Ingrese a su cuenta</h2>
+      </div>
+    </div>
+    <form class="from-log" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <input type="text" placeholder="Ingrese su usuario" formControlName="email">
+      <input type="password" placeholder="Ingrese su contraseña" formControlName="password">
+      <br>
+      <button type="submit" class="btn-login"> Inciar Sesión</button>
+    </form>
+  </div>
+</div>

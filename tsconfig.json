@@ -1,29 +1,20 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve"
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-, "pages/index.js"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  }
 }

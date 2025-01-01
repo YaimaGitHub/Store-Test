@@ -1,0 +1,41 @@
+<app-toolbar></app-toolbar>
+<br>
+<div class="container" *ngIf="prod$ | async as prod; else loading">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-8">
+      <div class="box__img_section">
+        <img [src]="prod.imgProd" alt="">
+      </div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+      <div class="box__info__product">
+        <div class="home" style="margin-bottom: 7px;">
+          <a routerLink="/home" style="display: flex; align-items: center; text-decoration: none"> <mat-icon>keyboard_backspace</mat-icon> Home</a>
+        </div>
+        <h2>{{prod.nameProd}}</h2>
+        <p>{{prod.descriptionProd}}</p>
+        <h1 *ngIf="prod.off>0">S/. {{prod.priceProd - (prod.priceProd * (prod.off * 1 / 100)) | number: '.2-2'}}</h1>
+        <div class="promo__content d-flex">
+          <mat-chip-list *ngIf="prod.off>0">
+            <mat-chip selected color="accent">-{{prod.off}}% dscto.</mat-chip>
+          </mat-chip-list>
+          <span *ngIf="prod.priceProd>0" [ngClass]="{'priceNormal': prod.off>0}">S/. {{prod.priceProd | number: '.2-2'}} </span>
+        </div>
+        <a href="{{wsp}} *{{prod.nameProd}}* 😊" target="_blank" mat-flat-button color="primary" style="width: 100%;">
+          <mat-icon >shopping_cart</mat-icon> ¡Quiero pedir!
+        </a>
+        &nbsp;
+        <a href="{{wspPregunta}} sobre: *{{prod.nameProd}}*" target="_blank" mat-stroked-button color="primary" style="width: 100%;">
+          <mat-icon >textsms</mat-icon> ¿Tienes dudas? Escribenos
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<ng-template #loading>
+  <div class="text-center">
+    <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+    </div>
+  </div>
+</ng-template>
