@@ -1,0 +1,106 @@
+@import './typography.scss';
+
+@font-face {
+  font-family: "PoppinsMedium";
+  src: url("/public/fonts/Poppins-Medium.otf");
+}
+
+@font-face {
+  font-family: "PoppinsRegular";
+  src: url("/public/fonts/Poppins-Regular.otf");
+}
+
+.btn-shadow {
+  box-shadow: 0px 10px 15px -3px rgba($color: $color-black, $alpha: .1);
+}
+
+.heavy-shadow {
+  box-shadow: 0px 10px 15px -3px rgba($color: $color-black, $alpha: .3);
+}
+
+.btn-white {
+  background-color: $color-white;
+  color: $color-black;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-primary;
+    transition: all .8s;
+  }
+}
+
+.button-yellow {
+  flex: none;
+  background-color: $color-primary;
+  color: $color-white;
+  border-radius: 20px;
+  padding: 0 25px;
+  font-size: 20px;
+  height: 60px;
+}
+
+.btn-active-hover:hover {
+  background: $color-primary;
+  transition: all .8s;
+}
+
+.background-image-1 {
+  background-image: url("@/assets/images/bg-icons-1.png");
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 630px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-image-2 {
+  background-image: url("@/assets/images/bg-icons-2.png");
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button {
+  border: none;
+  outline: 0;
+}
+
+.q-btn {
+  text-transform: none;
+
+  &::before {
+    box-shadow: 0px 10px 15px -3px rgba($color: $color-black, $alpha: .1);
+  }
+}
+
+.noshade {
+  &::before {
+    box-shadow: none;
+  }
+}
+
+.noaction {
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.mockbtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: $color-white;
+}
+
+.active {
+  background: $color-primary;
+}

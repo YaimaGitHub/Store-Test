@@ -1,0 +1,24 @@
+html body {
+    font-family: 'PoppinsRegular', 'Rubik', sans-serif;
+    background-color: $color-background;
+    color: $color-text;
+}
+
+.bold {
+    font-family: 'PoppinsMedium', 'Rubik', sans-serif;
+}
+
+.hint-title {
+    color: $color-primary;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.title {
+    color: $color-black;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    line-height: 40px;
+}
